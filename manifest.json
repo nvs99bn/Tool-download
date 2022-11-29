@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Tool download",
+  "description": "Download collections freepik",
+  "version": "1.0",
+  "icons": {
+    "48": "/images/download.png"
+  },
+  "action": {
+      "default_icon":{"16":"images/download.png"}
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.freepik.com/user/collections/*"],
+      "js": ["scripts/openCollection.js"]
+    },
+    {
+      "matches": ["https://www.freepik.com/*"],
+      "js": ["scripts/download.js"]
+    }
+  ]
+}

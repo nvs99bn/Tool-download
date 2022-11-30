@@ -11,8 +11,12 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://www.freepik.com/*"],
+      "matches": ["https://www.freepik.com/user/collections/*"],
       "js": ["scripts/openCollection.js"]
+    },
+    {
+      "matches": ["https://www.freepik.com/*"],
+      "js": ["scripts/download.js"]
     }
   ]
 }

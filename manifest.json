@@ -7,16 +7,18 @@
     "48": "/images/download.png"
   },
   "action": {
+      "default_popup": "popup.html",
       "default_icon":{"16":"images/download.png"}
   },
+  "permissions": ["activeTab", "scripting", "tabs","downloads"],
   "content_scripts": [
     {
-      "matches": ["https://www.freepik.com/user/collections/*"],
-      "js": ["scripts/openCollection.js"]
+      "matches": ["https://*.freepik.com/*"],
+      "js": ["scripts/download.js"]
     },
     {
-      "matches": ["https://www.freepik.com/*"],
-      "js": ["scripts/download.js"]
+      "matches": ["https://*.freepik.com/user/collections/*"],
+      "js": ["scripts/getCollectionsURLOfMultiPages.js"]
     }
-  ]
+  ] 
 }

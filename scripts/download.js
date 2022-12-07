@@ -5,8 +5,7 @@ if (linkDownload) {
   window.open(linkDownload, "_self");
 }
 
-let submitLinkDownload = document
-  ?.getElementById("submit-download")
+let submitLinkDownload = document?.getElementById("submit-download");
 if (submitLinkDownload) {
-    submitLinkDownload.click();
+  submitLinkDownload.click();
 }
